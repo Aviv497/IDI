@@ -1,0 +1,250 @@
+body {
+    display: flex;
+    background-color: #EDEDED;
+    font-family: "Rubik", sans-serif;
+    color: #727272;
+}
+
+html,
+body {
+    overflow: hidden
+}
+
+.all {
+    overflow: hidden;
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 103px;
+}
+
+.usergrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 114px;
+    height: 229px;
+    width: 380px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 3px #00000029;
+    border-radius: 10px;
+    font-family: 'Rubik', sans-serif;
+    margin-top: 35px;
+}
+
+.box {
+    border-right: 2px solid #00000029;
+}
+
+.box.one {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border-bottom: 2px solid #00000029;
+    border-right: none;
+}
+
+.box.four {
+    border-right: none;
+}
+
+.box.one>p {
+    display: flex;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 800;
+    justify-content: center;
+    margin-top: 63px;
+}
+
+.pfp {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    width: 90px;
+    height: 90px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("monkey.jpg");
+    box-shadow: 0px 2px 3px #00000029;
+    border-radius: 10px;
+}
+
+.box.two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box.two>img {
+    margin-top: 29.5px;
+    width: 28px;
+    height: 28px;
+}
+
+.box.two>p {
+    color: #292929;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 23px;
+}
+
+.box.three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box.three>img {
+    margin-top: 25.5px;
+    width: 36px;
+    height: 36px;
+}
+
+.box.three>p {
+    color: #292929;
+    font-weight: 600;
+    margin-top: 11px;
+    margin-bottom: 23px;
+}
+
+.box.four {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    word-wrap: break-word;
+    overflow: hidden;
+
+}
+
+.box.four>img {
+    margin-top: 19.5px;
+    width: 42px;
+    height: 42px;
+}
+
+.box.four>p {
+    color: #292929;
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 23px;
+}
+
+.saved-stuff {
+    direction: rtl;
+    margin-right: 25px;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.saved-stuff>p {
+    color: #292929;
+    font-weight: 600;
+}
+
+.cube {
+    min-width: 180px;
+    height: 266px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 3px #00000029;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-bottom: 0;
+}
+
+.cube>h1 {
+    margin-top: 109px;
+    margin: 10px 10px 0px 0px;
+    font-size: 20px;
+    color: #000000;
+    font-weight: medium;
+}
+
+.cube>.price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 160px;
+    height: 24px;
+    margin: 20px 10px 10px 0px;
+    font-size: 20px;
+    color: #000000;
+    font-weight: medium;
+}
+
+.cube>.price>h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #000000;
+    font-weight: medium;
+}
+
+.cube>.price>button {
+    font-family: "Rubik", sans-serif;
+
+    font-size: 14px;
+    color: #000000;
+    width: 87px;
+    height: 22px;
+    border: none;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 3px #00000048;
+    border-radius: 5px;
+}
+
+.cube>p {
+    margin: 5px 10px 0px 0px;
+    font-size: 16px;
+    color: #000000;
+    height: 73px;
+    width: 170px;
+    overflow: hidden;
+}
+
+.cubes-container {
+    margin-top: 20px;
+    height: 330px;
+    max-width: 405px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    overflow: auto;
+}
+
+.cube>.img>img {
+    overflow: visible;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 107px;
+    height: 163px;
+}
+
+.cube>.img {
+    margin-top: -64px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0;
+    width: 430px;
+    height: 80px;
+    /* UI Properties */
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: -2px 1px 7px #00000029;
+    border-radius: 40px 40px 0px 0px;
+    opacity: 1;
+}
+
+button {
+    background: transparent;
+    border: transparent;
+}

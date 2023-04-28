@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signin.css">
+    <title>Sign In</title>
+</head>
+
+<body>
+
+
+    <form action="/signin" method="POST">
+        <div class="img"></div>
+        <div class="top">
+            <h1>היי טוב שאתם כאן,</h1>
+            <h1>יש לכם חשבון?</h1>
+            <p>אנא הכניסו את שם המשתמש והסיסמה</p>
+        </div>
+        <div class="collum">
+            <input type="text" name="username" placeholder="שם משתמש" autocomplete="off">
+            <input type="password" name="password" placeholder="סיסמה" autocomplete="off">
+        </div>
+        <div class="change-pass">
+            <p>שכחתם את הסיסמה? <a href="/changepassword">איפוס סיסמה</a></p>
+        </div>
+        <div class="c">
+            <button type="submit" class="signin">התחברו</button>
+        </div>
+        <div class="signup">
+            <p>אתם עדיין לא רשומים? <a href="/signup">הרשמו</a></p>
+            <a href="">כניסה ללא משתמש</a>
+        </div>
+    </form>
+
+
+</body>
+
+</html>

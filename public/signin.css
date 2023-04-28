@@ -1,0 +1,280 @@
+body {
+    display: flex;
+    background-color: #EDEDED;
+    font-family: "Rubik", sans-serif;
+    color: #727272;
+    margin: 0;
+    height: 100vh;
+}
+
+html,
+body {
+    height: --webkit-fill-avilable;
+    overflow: hidden;
+    height: 100vh;
+
+}
+
+.collum {
+    direction: rtl;
+    bottom: 274px;
+    display: flex;
+    width: 100vw;
+    height: 136px;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+
+
+.collum>input {
+    display: flex;
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;
+    width: 340px;
+    padding: 0 20px 0 20px;
+    height: 53px;
+    flex-direction: column;
+    border-radius: 10px;
+    border: none;
+}
+
+input::placeholder {
+    color: black;
+}
+
+
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.collum>input:focus {
+    outline: none;
+}
+
+.signin {
+    margin-top: 28px;
+    width: 380px;
+    height: 53px;
+    border: none;
+    background-color: #707070;
+    font-size: 20px;
+    color: white;
+    /* box-shadow: 0px 3px 6px #00000029; */
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.signup {
+    margin-top: 10px;
+    height: 49px;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    direction: rtl;
+    color: #727272;
+}
+
+.signup>a {
+    direction: rtl;
+    left: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #727272;
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+p>a {
+    text-decoration: none;
+    color: #727272;
+    font-weight: bold;
+}
+
+.top {
+    margin-top: 44px;
+    direction: rtl;
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    color: #727272;
+}
+
+.top>h1 {
+    width: 380px;
+    margin: 0;
+    font-size: 35px;
+}
+
+.top>p {
+    width: 380px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.img {
+    width: 273px;
+    height: 253px;
+    display: block;
+    background-repeat: no-repeat;
+    margin-top: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    background-image: url(signin.png);
+}
+
+.c {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.change-pass {
+    margin-top: 15px;
+    direction: rtl;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.change-pass>p {
+    font-size: 14px;
+    width: 380px;
+}
+
+@media only screen and (max-width: 430px) {
+
+    .img {
+        margin-top: calc(60vw / 430 * 100);
+        width: calc(273vw / 430 * 100);
+        height: calc(253vw / 430 * 100);
+        background-size: cover;
+    }
+
+    .top {
+        margin-top: calc(44vw / 430 * 100);
+    }
+
+    .top>h1 {
+        width: calc(380vw / 430 * 100);
+        font-size: calc(35vw / 430 * 100);
+    }
+
+    .top>p {
+        width: calc(380vw / 430 * 100);
+        margin-top: calc(5vw / 430 * 100);
+        font-size: calc(16vw / 430 * 100);
+    }
+
+    .collum {
+        height: calc(136vw / 430 * 100);
+        margin-top: calc(30vw / 430 * 100);
+    }
+
+    .collum>input {
+        font-size: calc(20vw / 430 * 100);
+        width: calc(380vw / 430 * 100 - 40px);
+        height: calc(53vw / 430 * 100);
+    }
+
+    .change-pass {
+        margin-top: calc(15vw / 430 * 100);
+    }
+
+    .change-pass>p {
+        font-size: calc(14vw / 430 * 100);
+        width: calc(380vw / 430 * 100);
+    }
+
+    .signin {
+        margin-top: calc(28vw / 430 * 100);
+        width: calc(380vw / 430 * 100);
+        height: calc(53vw / 430 * 100);
+        font-size: calc(20vw / 430 * 100);
+    }
+
+    .signup {
+        margin-top: calc(10vw / 430 * 100);
+        height: calc(49vw / 430 * 100);
+        font-size: calc(18vw / 430 * 100);
+    }
+
+    .signup>a {
+        font-size: calc(14vw / 430 * 100);
+    }
+
+
+}
+
+@media only screen and (max-height: 932px) {
+
+    .img {
+        margin-top: calc(60vh / 932 * 100);
+        width: calc(273vh / 932 * 100);
+        height: calc(253vh / 932 * 100);
+        background-size: cover;
+    }
+
+    .top {
+        margin-top: calc(44vh / 932 * 100);
+    }
+
+    .top>h1 {
+        width: calc(380vh / 932 * 100);
+        font-size: calc(35vh / 932 * 100);
+    }
+
+    .top>p {
+        width: calc(380vh / 932 * 100);
+        margin-top: calc(5vh / 932 * 100);
+        font-size: calc(16vh / 932 * 100);
+    }
+
+    .collum {
+        height: calc(136vh / 932 * 100);
+        margin-top: calc(30vh / 932 * 100);
+    }
+
+    .collum>input {
+        font-size: calc(20vh / 932 * 100);
+        width: calc(380vh / 932 * 100 - 40px);
+        height: calc(53vh / 932 * 100);
+        padding: 0 20px 0 20px;
+    }
+
+    .change-pass {
+        margin-top: calc(15vh / 932 * 100);
+    }
+
+    .change-pass>p {
+        font-size: calc(14vh / 932 * 100);
+        width: calc(380vh / 932 * 100);
+    }
+
+    .signin {
+        margin-top: calc(28vh / 932 * 100);
+        width: calc(380vh / 932 * 100);
+        height: calc(53vh / 932 * 100);
+        font-size: calc(20vh / 932 * 100);
+    }
+
+    .signup {
+        margin-top: calc(10vh / 932 * 100);
+        height: calc(49vh / 932 * 100);
+        font-size: calc(18vh / 932 * 100);
+    }
+
+    .signup>a {
+        font-size: calc(14vh / 932 * 100);
+    }
+
+
+}

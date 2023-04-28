@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign Up</title>
+</head>
+
+<body>
+
+    <form action="/signup" method="POST">
+        <div class="top">
+            <h1>להרשמה</h1>
+            <p>אנא מלאו את הפרטים הבאים</p>
+        </div>
+        <div class="collum">
+            <input type="text" name="first_name" placeholder="שם פרטי" autocomplete="off">
+            <input type="text" name="last_name" placeholder="שם משפחה" autocomplete="off">
+            <input type="text" name="username" placeholder="שם משתמש" autocomplete="off">
+            <input type="text" name="email" placeholder="אימייל" autocomplete="off">
+            <input type="password" name="password" placeholder="סיסמה" autocomplete="off">
+        </div>
+        <div class="c">
+            <button type="submit" class="signup" herf="">הרשמו</button>
+        </div>
+        <div class="login">
+            <p>רשומים כבר? <a href="/signin">התחברו</a></p>
+            <a href="">כניסה ללא משתמש</a>
+        </div>
+    </form>
+
+
+</body>
+
+</html>

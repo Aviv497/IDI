@@ -1,0 +1,209 @@
+body {
+    display: flex;
+    background-color: #EDEDED;
+    font-family: "Rubik", sans-serif;
+    color: #727272;
+    margin: 0;
+}
+
+html,
+body {
+    height: --webkit-fill-avilable;
+    overflow: hidden
+}
+
+.collum {
+    margin-top: 30px;
+    direction: rtl;
+    display: flex;
+    width: 100vw;
+    height: 385px;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.collum>input {
+    display: flex;
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;
+    width: 340px;
+    padding: 0 20px 0 20px;
+    height: 53px;
+    flex-direction: column;
+    border-radius: 10px;
+    border: none;
+}
+
+input::placeholder {
+    color: black;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.collum>input:focus {
+    outline: none;
+}
+
+.signup {
+    width: 380px;
+    height: 53px;
+    border: none;
+    background-color: #707070;
+    font-size: 20px;
+    color: white;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 10px;
+    font-weight: bold;
+    justify-content: center;
+    margin-top: 132px;
+}
+
+.c {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+}
+
+.login {
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    direction: rtl;
+    color: #727272;
+    margin-top: 10px;
+}
+
+.login>a {
+    direction: rtl;
+    left: 0;
+    margin: 15;
+    font-size: 14px;
+    font-weight: 500;
+    color: #727272;
+}
+
+
+.login>p>a {
+    text-decoration: none;
+    color: #727272;
+    font-weight: bold;
+}
+
+.top {
+    margin-top: 105px;
+    direction: rtl;
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    color: #727272;
+    align-items: center;
+}
+
+.top>h1 {
+    width: 380px;
+    margin: 0;
+    font-size: 35px;
+}
+
+.top>p {
+    width: 380px;
+    margin: 0;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 430px) {
+
+    .signup {
+        width: calc(380vw / 430 * 100);
+        height: calc(53vw / 430 * 100);
+        font-size: calc(20vw / 430 * 100);
+        margin-top: calc(132vw / 430 * 100);
+    }
+
+    .collum {
+        margin-top: calc(30vw / 430 * 100);
+        height: calc(385vw / 430 * 100);
+    }
+
+    .collum>input {
+        font-size: calc(20vw / 430 * 100);
+        width: calc(338vw / 430 * 100);
+        height: calc(53vw / 430 * 100);
+    }
+
+    .top {
+        margin-top: calc(105vw / 430 * 100);
+    }
+
+    .top>h1 {
+        width: calc(380vw / 430 * 100);
+        font-size: calc(35vw / 430 * 100);
+    }
+
+    .top>p {
+        width: calc(380vw / 430 * 100);
+        font-size: calc(16vw / 430 * 100);
+    }
+
+    .login {
+        font-size: calc(14vw / 430 * 100);
+        margin-top: calc(10vw / 430 * 100);
+    }
+
+    .login>a {
+        margin-top: calc(10vw / 430 * 100);
+        font-size: calc(14vw / 430 * 100);
+    }
+
+}
+
+@media only screen and (max-height: 932px) {
+    .top {
+        margin-top: calc(105vh / 932 * 100);
+    }
+
+    .top>h1 {
+        width: calc(380vh / 932 * 100);
+        font-size: calc(35vh / 932 * 100);
+    }
+
+    .top>p {
+        width: calc(380vh / 932 * 100);
+
+        font-size: calc(16vh / 932 * 100);
+    }
+
+    .collum {
+        margin-top: calc(30vh / 932 * 100);
+        font-size: calc(20vh / 932 * 100);
+        height: calc(385vh / 932 * 100);
+    }
+
+    .collum>input {
+        font-size: calc(20vh / 932 * 100);
+        width: calc(380vh / 932 * 100 - 40px);
+        height: calc(53vh / 932 * 100);
+    }
+
+    .signup {
+        font-size: calc(20vh / 932 * 100);
+        margin-top: calc(132vh / 932 * 100);
+        width: calc(380vh / 932 * 100);
+        height: calc(53vh / 932 * 100);
+    }
+
+    .login {
+        font-size: calc(14vh / 932 * 100);
+        margin-top: calc(10vh / 932 * 100);
+    }
+
+    .login>a {
+        margin-top: calc(10vh / 932 * 100);
+        font-size: calc(14vh / 932 * 100);
+    }
+}
