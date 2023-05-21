@@ -10,10 +10,9 @@ const LocalStrategy = require('passport-local')
 const passportLocalMongoose = require("passport-local-mongoose");
 
 const path = require('path');
+const { connect } = require("http2");
 
 const app = express();
-
-const PORT = `mongodb+srv://Aviv:aviv2206@idi.9i0ahxv.mongodb.net/idiDB` || 3000;
 
 // app.use(express.static("public"));
 
@@ -36,19 +35,23 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+mongoose.set('strictQuery', false)
+
 const connectDB = async () => {
     try {
-        const conn = await mongoose.connect(`mongodb+srv://Aviv:aviv2206@idi.9i0ahxv.mongodb.net/idiDB`, {
+        const conn = await mongoose.connect('mongodb+srv://Aviv:aviv2206@idi.9i0ahxv.mongodb.net/idiDB', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true
-        });
-        console.log(`MongoDB Connected: ${conn.connection.host}`);
-    } catch (error) {
-        console.log(error);
-        process.exit(1);
-    }
-};
+        })
+        console.log(`MongoDB Connected ${conn.connection.host}`);
+
+    } catch (err) {
+        console.log("OH NO Mongo connection ERROR!!!!!");
+        console.log(err);
+        process.exit(1)
+    };
+}
 
 const userSchema = new mongoose.Schema({
     first_name: String,
@@ -189,13 +192,13 @@ app.post("/signin", async (req, res) => {
 
 });
 
-app.all('*', (req, res) => {
-    res.json({ "everything": "is awesome" });
+app.use((req, res, next) => {
+    res.status(404).send('<h1>Sorry, the page you were looking for is not found</h1>')
 });
 
-// Connect to the database before listening
+
 connectDB().then(() => {
-    app.listen(3000, () => {
-        console.log("Listening for requests");
+    app.listen(3000, function () {
+        console.log("Server started on port 3000.");
     });
 });
