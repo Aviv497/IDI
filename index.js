@@ -35,8 +35,6 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.set('strictQuery', false)
-
 const connectDB = async () => {
     try {
         const conn = await mongoose.connect('mongodb+srv://Aviv:aviv2206@idi.9i0ahxv.mongodb.net/idiDB', {
