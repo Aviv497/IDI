@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="main.css">
     <script src="https://kit.fontawesome.com/e1c338c744.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
     <title>Main</title>
 </head>
 
@@ -24,25 +25,28 @@
                 </div>
             </div>
             <div class="icons">
-                <button><i class="fa-regular fa-bell" style="color: #000000; font-size: 18.33px;"></i></button>
-                <button><i class="fa-solid fa-gear"
-                        style="color: #000000; opacity: 0.7; font-size: 16.82px;"></i></button>
+                <button class="bell"><i class="fa-regular fa-bell" style="color: #000000;"></i></button>
+                <button class="gear"><i class="fa-solid fa-gear" style="color: #000000; opacity: 0.7; "></i></button>
             </div>
         </div>
         <div class="search">
-            <i class="fa-solid fa-magnifying-glass" style="color: #000000; font-size: 15px;"></i>
+            <i class="fa-solid fa-magnifying-glass" style="color: #000000; "></i>
             <input type="search" placeholder="מחפשים פריט ספציפי?">
         </div>
-        <div class="scan">
-            <h1>התחילו לסרוק את הבית</h1>
-            <p>סרקו את הבית, בחרו את העיצוב האהוב עליכם ויחד נעצב את הבית</p>
-        </div>
+        <a href="/design"><button class="scan">
+                <h1>התחילו לסרוק את הבית</h1>
+                <p>סרקו את הבית, בחרו את העיצוב האהוב עליכם ויחד נעצב את הבית</p>
+            </button></a>
         <div class="best-sellers">
             <h1>הנמכרים ביותר</h1>
             <div class="cubes-container">
                 <div class="cube">
                     <div class="img">
-                        <img src="chair.png" alt="">
+                        <!-- <img src="photos/chair.png" alt=""> -->
+                        <model-viewer src="chair1.glb" alt="nice model of a grey chair" poster="poster.png" ar
+                            ar-modes="webxr scene-viewer quick-look" camera-controls touch-action="pan-y" disable-zoom
+                            ar-scale="fixed" field-of-view="85">
+
                     </div>
                     <h1>כיסא מעוצב</h1>
                     <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן
@@ -54,7 +58,25 @@
                 </div>
                 <div class="cube">
                     <div class="img">
-                        <img src="chair.png" alt="">
+                        <model-viewer src="TeaTable01.glb" alt="nice model of a grey chair" poster="TeaTable01.png" ar
+                            ar-modes="webxr scene-viewer quick-look" camera-controls touch-action="pan-y" disable-zoom
+                            ar-scale="fixed" field-of-view="85" camera-orbit="125.8deg 82.43deg 2.273m">
+                        </model-viewer>
+                    </div>
+                    <h1>שולחן קפה</h1>
+                    <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן
+                        קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק</p>
+                    <div class="price">
+                        <h1>250₪</h1>
+                        <button>לבדיקה בבית</button>
+                    </div>
+                </div>
+                <div class="cube">
+                    <div class="img">
+                        <model-viewer src="Chair2_Lilly.glb" alt="nice model of a grey chair" ar
+                            ar-modes="webxr scene-viewer quick-look" camera-controls touch-action="pan-y" disable-zoom
+                            ar-scale="fixed" field-of-view="85" camera-orbit="125.8deg 82.43deg 2.273m">
+                        </model-viewer>
                     </div>
                     <h1>כיסא מעוצב</h1>
                     <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן
@@ -66,7 +88,22 @@
                 </div>
                 <div class="cube">
                     <div class="img">
-                        <img src="chair.png" alt="">
+                        <model-viewer src="sofa.glb" alt="nice model of a grey chair" ar
+                            ar-modes="webxr scene-viewer quick-look" camera-controls touch-action="pan-y" disable-zoom
+                            field-of-view="85">
+                        </model-viewer>
+                    </div>
+                    <h1>ספה זוגית</h1>
+                    <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן
+                        קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק</p>
+                    <div class="price">
+                        <h1>250₪</h1>
+                        <button>לבדיקה בבית</button>
+                    </div>
+                </div>
+                <div class="cube">
+                    <div class="img">
+                        <img src="photos/chair.png" alt="">
                     </div>
                     <h1>כיסא מעוצב</h1>
                     <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן
@@ -78,31 +115,7 @@
                 </div>
                 <div class="cube">
                     <div class="img">
-                        <img src="chair.png" alt="">
-                    </div>
-                    <h1>כיסא מעוצב</h1>
-                    <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן
-                        קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק</p>
-                    <div class="price">
-                        <h1>250₪</h1>
-                        <button>לבדיקה בבית</button>
-                    </div>
-                </div>
-                <div class="cube">
-                    <div class="img">
-                        <img src="chair.png" alt="">
-                    </div>
-                    <h1>כיסא מעוצב</h1>
-                    <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן
-                        קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת נפקט למסון בלרק</p>
-                    <div class="price">
-                        <h1>250₪</h1>
-                        <button>לבדיקה בבית</button>
-                    </div>
-                </div>
-                <div class="cube">
-                    <div class="img">
-                        <img src="chair.png" alt="">
+                        <img src="photos/chair.png" alt="">
                     </div>
                     <h1>כיסא מעוצב</h1>
                     <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן
@@ -116,10 +129,10 @@
         </div>
         <div class="footer">
             <a href="/user">
-                <button><i class="fa fa-user" style="color: #000000; font-size: 25px;  opacity: 0.4;"></i></button>
+                <button class="user"><i class="fa fa-user" style="color: #000000; opacity: 0.4;"></i></button>
             </a>
-            <button><i class="fa fa-home" aria-hidden="true" style="color: #000000; font-size: 27px;"></i></button>
-            <button><i class="fa fa-shopping-cart" style="color: #000000; font-size: 27px; opacity: 0.4;"></i></button>
+            <button class="home"><i class="fa fa-home" aria-hidden="true" style="color: #000000;"></i></button>
+            <button class="cart"><i class="fa fa-shopping-cart" style="color: #000000; opacity: 0.4;"></i></button>
         </div>
     </div>
 

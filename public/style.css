@@ -1,0 +1,195 @@
+body {
+    display: flex;
+    background-color: #EDEDED;
+    font-family: "Rubik", sans-serif;
+    color: black;
+    direction: rtl;
+}
+
+html,
+body {
+    height: --webkit-fill-avilable;
+    overflow: hidden;
+    margin: 0;
+}
+
+.all {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background {
+    display: flex;
+    flex-direction: column;
+    height: 265px;
+    width: 100vw;
+    background-color: white;
+    align-items: center;
+}
+
+.background>img {
+    width: 299px;
+    height: 136px;
+    margin-top: 58px;
+}
+
+.indicators {
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    width: 244px;
+    height: 2px;
+}
+
+.indicator {
+    width: 46px;
+    height: 2px;
+    /* UI Properties */
+    background: #7B7B7B 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 0.4;
+}
+
+.indicator.active {
+    opacity: 1;
+}
+
+.text {
+    margin-top: 30px;
+    width: 405px;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.text>h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.text>p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.styles {
+    text-align: right;
+    display: flex;
+    margin-top: 30px;
+    width: 405px;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+}
+
+.styles>div {
+    min-width: 323px;
+    height: 446px;
+    background-size: cover;
+    background: transparent linear-gradient(180deg, #00000000 0%, #5454544D 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 10px;
+    margin: 0 0 4px 15px;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+}
+
+.styles>div>.text {
+    margin: 0 20px 20px 0;
+    text-shadow: 0px 3px 6px #00000029;
+}
+
+.styles>div>.text>h1 {
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+    margin: 0;
+}
+
+.styles>div>.text>p {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+
+}
+
+.styles-container {
+    width: 430px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media only screen and (max-height: 932px) {
+
+    .background {
+        height: calc(265vh / 932 * 100);
+    }
+
+    .background>img {
+        width: calc(299vh / 932 * 100);
+        height: calc(136vh / 932 * 100);
+        margin-top: calc(58vh / 932 * 100);
+    }
+
+    .indicators {
+        margin-top: calc(45vh / 932 * 100);
+        width: calc(244vh / 932 * 100);
+        height: calc(2vh / 932 * 100);
+    }
+
+    .indicator {
+        width: calc(46vh / 932 * 100);
+        height: calc(2vh / 932 * 100);
+    }
+
+    .text {
+        margin-top: calc(30vh / 932 * 100);
+        width: calc(405vh / 932 * 100);
+    }
+
+    .text>h1 {
+        font-size: calc(25vh / 932 * 100);
+    }
+
+    .text>p {
+        font-size: calc(14vh / 932 * 100);
+    }
+
+    .styles {
+        margin-top: calc(30vh / 932 * 100);
+        width: calc(405vh / 932 * 100);
+        height: calc(450vh / 932 * 100);
+    }
+
+    .styles>div {
+        min-width: calc(332vh / 932 * 100);
+        height: calc(446vh / 932 * 100);
+        margin: 0 0 calc(4vh / 932 * 100) calc(15vh / 932 * 100);
+    }
+
+    .styles>div>.text {
+        margin: 0 calc(20vh / 932 * 100) calc(20vh / 932 * 100) 0;
+    }
+
+    .styles>div>.text>h1 {
+        font-size: calc(20vh / 932 * 100);
+    }
+
+    .styles>div>.text>p {
+        font-size: calc(16vh / 932 * 100);
+
+    }
+
+    .styles-container {
+        width: calc(430vh / 932 * 100);
+    }
+
+}

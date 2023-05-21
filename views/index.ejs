@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+  <title>Main</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="carousel.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <div class="carousel-inner">
+        <div class="item one active">
+          <section id="greeting">
+            <img src="photos/1.png">
+            <div class="text">
+              <h1 class="text-center">עיצוב הבית</h1>
+              <p class="text-center">עיצובים חדישים המותאמים לסגנון שלכם שעוצבו על ידי מעצבי הפנים הטובים בארץ</p>
+            </div>
+
+          </section>
+
+        </div>
+        <div class="item two">
+          <section id="greeting">
+            <img src="photos/2.png">
+            <div class="text">
+              <h1 class="text-center">חווית קניה שלא הכרתם</h1>
+              <p class="text-center">מאות מוצרים מהמותגים המובילים נגישים לכם בלחיצת כפתור</p>
+            </div>
+          </section>
+        </div>
+        <div class="item three">
+          <section id="greeting">
+            <img src="photos/3.png">
+            <div class="text">
+
+              <h1 class="text-center">בדיקת המוצר בבית לפני הקניה</h1>
+              <p class="text-center">בעזרת טכנולוגיית ה AR תוכלו להניח את המוצר אצלכם בחדר בגודלו המדוייק ולראות איך הוא
+                משתלב בחלל</p>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="center">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <a href="/signin" role="button"><button>בואו נתחיל</button></a>
+      </div>
+      <p id="signup" class="text-center">אתם עדיין לא רשומים? <a href="/signup">הרשמו</a></p>
+
+</body>
+
+</html>

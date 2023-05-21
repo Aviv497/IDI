@@ -3,20 +3,23 @@ body {
     background-color: #EDEDED;
     font-family: "Rubik", sans-serif;
     color: #727272;
+    overflow: hidden;
 }
 
 html,
 body {
-    overflow: hidden
+    height: --webkit-fill-avilable;
+    overflow: hidden;
 }
 
 .all {
     overflow: hidden;
     display: flex;
     width: 100vw;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
-    margin-top: 103px;
+    margin-top: 24px;
 }
 
 .usergrid {
@@ -65,7 +68,6 @@ body {
     height: 90px;
     background-position: center;
     background-size: cover;
-    background-image: url("monkey.jpg");
     box-shadow: 0px 2px 3px #00000029;
     border-radius: 10px;
 }
@@ -140,6 +142,7 @@ body {
 .saved-stuff>p {
     color: #292929;
     font-weight: 600;
+    margin: 0;
 }
 
 .cube {
@@ -149,7 +152,7 @@ body {
     box-shadow: 0px 2px 3px #00000029;
     border-radius: 10px;
     margin-left: 15px;
-    margin-bottom: 0;
+    margin-bottom: 2px;
 }
 
 .cube>h1 {
@@ -203,7 +206,7 @@ body {
 
 .cubes-container {
     margin-top: 20px;
-    height: 330px;
+    height: 332px;
     max-width: 405px;
     display: flex;
     flex-direction: row;
@@ -212,8 +215,8 @@ body {
 }
 
 .cube>.img>img {
-    overflow: visible;
-
+    overflow-x: visible;
+    overflow-y: hidden;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -247,4 +250,159 @@ body {
 button {
     background: transparent;
     border: transparent;
+}
+
+.user {
+    font-size: 25px;
+}
+
+.home {
+    font-size: 27px;
+}
+
+.cart {
+    font-size: 27px;
+}
+
+@media only screen and (max-height: 932px) {
+
+    .all {
+        margin-top: calc(24vh / 932 * 100);
+    }
+
+    .usergrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: calc(114vh / 932 * 100);
+        height: calc(229vh / 932 * 100);
+        width: calc(380vh / 932 * 100);
+        margin-top: calc(35vh / 932 * 100);
+    }
+
+    .box.one>p {
+        font-size: calc(20vh / 932 * 100);
+        margin-top: calc(63vh / 932 * 100);
+    }
+
+    .pfp {
+        width: calc(90vh / 932 * 100);
+        height: calc(90vh / 932 * 100);
+        background-image: url("monkey.jpg");
+    }
+
+    .box.two>img {
+        margin-top: calc(29.5vh / 932 * 100);
+        width: calc(28vh / 932 * 100);
+        height: calc(28vh / 932 * 100);
+    }
+
+    .box.two>p {
+        margin-top: calc(15vh / 932 * 100);
+        margin-bottom: calc(23vh / 932 * 100);
+        font-size: calc(16vh / 932 * 100);
+    }
+
+    .box.three>p {
+        margin-top: calc(11vh / 932 * 100);
+        margin-bottom: calc(23vh / 932 * 100);
+        font-size: calc(16vh / 932 * 100);
+    }
+
+    .box.three>img {
+        margin-top: calc(25.5vh / 932 * 100);
+        width: calc(36vh / 932 * 100);
+        height: calc(36vh / 932 * 100);
+    }
+
+    .box.four>img {
+        margin-top: calc(19.5vh / 932 * 100);
+        width: calc(42vh / 932 * 100);
+        height: calc(42vh / 932 * 100);
+    }
+
+    .box.four>p {
+        margin-top: calc(12vh / 932 * 100);
+        margin-bottom: calc(23vh / 932 * 100);
+        font-size: calc(16vh / 932 * 100);
+    }
+
+    .saved-stuff {
+        margin-right: calc(25vh / 932 * 100);
+        margin-top: calc(40vh / 932 * 100);
+        font-size: calc(20vh / 932 * 100);
+    }
+
+    .cube {
+        min-width: calc(180vh / 932 * 100);
+        height: calc(266vh / 932 * 100);
+        margin-left: calc(15vh / 932 * 100);
+    }
+
+    .cube>h1 {
+        margin-top: calc(109vh / 932 * 100);
+        margin: calc(10vh / 932 * 100) calc(10vh / 932 * 100) 0px 0px;
+        font-size: calc(20vh / 932 * 100);
+    }
+
+    .cube>.price {
+        width: calc(160vh / 932 * 100);
+        height: calc(24vh / 932 * 100);
+        margin: calc(20vh / 932 * 100) calc(10vh / 932 * 100) calc(10vh / 932 * 100) 0px;
+        font-size: calc(20vh / 932 * 100);
+    }
+
+    .cube>.price>h1 {
+        font-size: calc(20vh / 932 * 100);
+    }
+
+    .cube>.price>button {
+        font-size: calc(14vh / 932 * 100);
+        width: calc(87vh / 932 * 100);
+        height: calc(22vh / 932 * 100);
+    }
+
+    .cube>p {
+        margin: calc(5vh / 932 * 100) calc(10vh / 932 * 100) 0px 0px;
+        font-size: calc(16vh / 932 * 100);
+        color: #000000;
+        height: calc(73vh / 932 * 100);
+        width: calc(170vh / 932 * 100);
+    }
+
+    .cubes-container {
+        margin-top: calc(20vh / 932 * 100);
+        height: calc(330vh / 932 * 100);
+        max-width: calc(405vh / 932 * 100);
+    }
+
+    .cube>.img>img {
+        width: calc(107vh / 932 * 100);
+        height: calc(163vh / 932 * 100);
+    }
+
+    .cube>.img {
+        margin-top: calc(-64vh / 932 * 100);
+    }
+
+    .footer {
+        width: 100vw;
+        height: calc(80vh / 932 * 100);
+    }
+
+    button {
+        padding: 0;
+        font-size: calc(14vh / 932 * 100);
+    }
+
+    .user {
+        font-size: calc(25vh / 932 * 100);
+    }
+
+    .home {
+        font-size: calc(27vh / 932 * 100);
+    }
+
+    .cart {
+        font-size: calc(27vh / 932 * 100);
+    }
 }

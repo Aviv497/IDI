@@ -7,6 +7,7 @@ body {
 
 html,
 body {
+    height: --webkit-fill-avilable;
     overflow: hidden;
 
 }
@@ -37,7 +38,7 @@ body {
     border-radius: 10px;
     background-position: center;
     background-size: cover;
-    background-image: url("monkey.jpg");
+    background-image: url("photos/userprofiledefualt.jpg");
 }
 
 .text {
@@ -46,7 +47,6 @@ body {
 
 .text>p {
     color: #000000;
-
     font-size: 16px;
     height: min-content;
     margin: 0;
@@ -67,19 +67,29 @@ body {
 
 .icons {
     width: 84px;
-
     height: min-content;
     display: flex;
     justify-content: space-between;
 }
 
 .icons>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 32px;
     height: 32px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 2px 3px #00000029;
     border-radius: 5px;
     border: none;
+}
+
+.bell {
+    font-size: 18.33px;
+}
+
+.gear {
+    font-size: 16.82px;
 }
 
 .search {
@@ -94,6 +104,7 @@ body {
     position: absolute;
     z-index: 2;
     margin-left: 20px;
+    font-size: 15px;
 }
 
 .search>input {
@@ -142,9 +153,12 @@ input:focus::placeholder {
     height: 139px;
     /* UI Properties */
     background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 3px #00000029;
     border-radius: 10px;
     opacity: 0.73;
 }
+
+
 
 .scan>h1 {
     margin: 0 20px 0 0;
@@ -158,6 +172,7 @@ input:focus::placeholder {
     font-size: 14px;
     width: 214px;
     font-weight: 300;
+    text-align: right;
 }
 
 .best-sellers {
@@ -180,11 +195,10 @@ input:focus::placeholder {
     box-shadow: 0px 2px 3px #00000029;
     border-radius: 10px;
     margin-left: 15px;
-    margin-bottom: 0;
+    margin-bottom: 2px;
 }
 
 .cube>h1 {
-    margin-top: 109px;
     margin: 10px 10px 0px 0px;
     font-size: 20px;
     color: #000000;
@@ -234,7 +248,7 @@ input:focus::placeholder {
 
 .cubes-container {
     margin-top: 20px;
-    height: 330px;
+    height: 332px;
     max-width: 405px;
     display: flex;
     flex-direction: row;
@@ -276,6 +290,183 @@ input:focus::placeholder {
 }
 
 button {
+    padding: 0;
     background: transparent;
     border: transparent;
+}
+
+.user {
+    font-size: 25px;
+}
+
+.home {
+    font-size: 27px;
+}
+
+.cart {
+    font-size: 27px;
+}
+
+@media only screen and (max-height: 932px) {
+    .options {
+        width: calc(379vh / 932 * 100);
+    }
+
+    .pfp {
+        width: calc(60vh / 932 * 100);
+        height: calc(60vh / 932 * 100);
+        margin-left: calc(11vh / 932 * 100);
+    }
+
+    .text {
+        margin-top: calc(10vh / 932 * 100);
+    }
+
+    .text>p {
+        font-size: calc(16vh / 932 * 100);
+        height: min-content;
+    }
+
+    .text>h1 {
+        font-size: calc(20vh / 932 * 100);
+        height: min-content;
+    }
+
+    .icons {
+        width: calc(84vh / 932 * 100);
+    }
+
+    .icons>button {
+        width: calc(32vh / 932 * 100);
+        height: calc(32vh / 932 * 100);
+    }
+
+    .bell {
+        font-size: calc(18.33vh / 932 * 100);
+    }
+
+    .gear {
+        font-size: calc(16.82vh / 932 * 100);
+    }
+
+    .search {
+        margin-top: calc(40vh / 932 * 100);
+        width: calc(380vh / 932 * 100);
+        height: calc(40vh / 932 * 100);
+    }
+
+    .search>i {
+        margin-left: calc(20vh / 932 * 100);
+        font-size: calc(15vh / 932 * 100);
+    }
+
+    .search>input {
+        padding-right: calc(20vh / 932 * 100);
+        width: calc(380vh / 932 * 100);
+        height: calc(40vh / 932 * 100);
+    }
+
+    .search>input::placeholder {
+        font-size: calc(16vh / 932 * 100);
+    }
+
+    .scan {
+        margin-top: calc(30vh / 932 * 100);
+        width: calc(380vh / 932 * 100);
+        height: calc(139vh / 932 * 100);
+    }
+
+    .scan>h1 {
+        margin: 0 calc(20vh / 932 * 100) 0 0;
+        font-size: calc(20vh / 932 * 100);
+    }
+
+    .scan>p {
+        margin: 0 calc(20vh / 932 * 100) calc(19vh / 932 * 100) 0;
+        font-size: calc(14vh / 932 * 100);
+        width: calc(214vh / 932 * 100);
+    }
+
+    .best-sellers {
+        margin-right: calc(25vh / 932 * 100);
+        margin-top: calc(30vh / 932 * 100);
+        font-size: calc(20vh / 932 * 100);
+    }
+
+    .best-sellers>h1 {
+        font-size: calc(30vh / 932 * 100);
+    }
+
+    .cube {
+        min-width: calc(180vh / 932 * 100);
+        height: calc(266vh / 932 * 100);
+        margin-left: calc(15vh / 932 * 100);
+    }
+
+    .cube>h1 {
+        margin: calc(10vh / 932 * 100) calc(10vh / 932 * 100) 0px 0px;
+        font-size: calc(20vh / 932 * 100);
+    }
+
+    .cube>.price {
+        width: calc(160vh / 932 * 100);
+        height: calc(24vh / 932 * 100);
+        margin: calc(20vh / 932 * 100) calc(10vh / 932 * 100) calc(10vh / 932 * 100) 0px;
+        font-size: calc(20vh / 932 * 100);
+    }
+
+    .cube>.price>h1 {
+        font-size: calc(20vh / 932 * 100);
+    }
+
+    .cube>.price>button {
+        font-size: calc(14vh / 932 * 100);
+        width: calc(87vh / 932 * 100);
+    }
+
+    .cube>p {
+        margin: calc(5vh / 932 * 100) calc(10vh / 932 * 100) 0px 0px;
+        font-size: calc(16vh / 932 * 100);
+        height: calc(73vh / 932 * 100);
+        width: calc(170vh / 932 * 100);
+    }
+
+    .cubes-container {
+        margin-top: calc(20vh / 932 * 100);
+        height: calc(330vh / 932 * 100);
+        max-width: calc(405vh / 932 * 100);
+    }
+
+    .cube>.img>img {
+        width: calc(107vh / 932 * 100);
+        height: calc(163vh / 932 * 100);
+    }
+
+    .cube>.img {
+        margin-top: calc(-64vh / 932 * 100);
+    }
+
+    button {
+        font-size: calc(14vh / 932 * 100);
+    }
+
+    .footer {
+        height: calc(80vh / 932 * 100);
+    }
+
+    .user {
+        font-size: calc(25vh / 932 * 100);
+    }
+
+    .home {
+        font-size: calc(27vh / 932 * 100);
+    }
+
+    .cart {
+        font-size: calc(27vh / 932 * 100);
+    }
+}
+
+a {
+    text-decoration: none;
 }

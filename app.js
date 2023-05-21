@@ -9,12 +9,15 @@ const passport = require("passport");
 const LocalStrategy = require('passport-local')
 const passportLocalMongoose = require("passport-local-mongoose");
 
+const path = require('path');
 
 const app = express();
 
 // app.use(express.static("public"));
 
 app.use(express.static(__dirname + '/public'));
+app.use('/build/', express.static(path.join(__dirname, 'node_modules/three/build')));
+app.use('/jsm/', express.static(path.join(__dirname, 'node_modules/three/examples/jsm')));
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
@@ -76,9 +79,16 @@ passport.deserializeUser(User.deserializeUser());
 // });
 
 app.get("/", function (req, res) {
-    res.render("home");
+    res.render("index");
 });
 
+app.get("/three", function (req, res) {
+    res.render("three");
+});
+
+app.get("/measure", function (req, res) {
+    res.render("measure");
+});
 
 app.get("/signup", function (req, res) {
     res.render("signup");
@@ -89,12 +99,57 @@ app.get("/signin", function (req, res) {
 });
 
 app.get("/user", async (req, res) => {
-    // const user_name = await User.findById(req.params._id)
-    // console.log('Find user:', user_name)
     if (!req.isAuthenticated()) {
         res.redirect("signin")
     } else res.render("user", { user: req.user });
 });
+
+app.get("/main", async (req, res, next) => {
+    if (!req.isAuthenticated()) {
+        res.redirect("signin")
+    } else {
+        res.render("main", { user: req.user });
+    }
+});
+
+app.get("/design", async (req, res) => {
+    if (!req.isAuthenticated()) {
+        res.redirect("signin")
+    } else {
+        res.render("design", { user: req.user });
+    }
+});
+
+app.get("/budget", async (req, res) => {
+    if (!req.isAuthenticated()) {
+        res.redirect("signin")
+    } else res.render("budget", { user: req.user });
+});
+
+app.get("/fullroom", async (req, res) => {
+    if (!req.isAuthenticated()) {
+        res.redirect("signin")
+    } else res.render("fullroom", { user: req.user });
+});
+
+app.get("/few-items", async (req, res) => {
+    if (!req.isAuthenticated()) {
+        res.redirect("signin")
+    } else res.render("few-items", { user: req.user });
+});
+
+app.get("/one-item", async (req, res) => {
+    if (!req.isAuthenticated()) {
+        res.redirect("signin")
+    } else res.render("one-item", { user: req.user });
+});
+
+app.get("/style", async (req, res) => {
+    if (!req.isAuthenticated()) {
+        res.redirect("signin")
+    } else res.render("style", { user: req.user });
+});
+
 
 app.get("/secrets", function (req, res) {
     if (req.isAuthenticated()) {
@@ -104,11 +159,6 @@ app.get("/secrets", function (req, res) {
     }
 });
 
-app.get("/main", function (req, res) {
-    if (!req.isAuthenticated()) {
-        res.redirect("signin")
-    } else res.render("main", { user: req.user });
-});
 
 app.post("/signup", async (req, res) => {
 
@@ -129,7 +179,6 @@ app.post("/signup", async (req, res) => {
 });
 
 app.post("/signin", async (req, res) => {
-    console.log('Got body at sign in:', req.body);
     const user = await new User({
         username: req.body.username,
         password: req.body.password
@@ -139,7 +188,6 @@ app.post("/signin", async (req, res) => {
             console.log(err);
         } else {
             passport.authenticate("local")(req, res, function () {
-                console.log('user =', req.user);
                 res.redirect("/main");
             });
         }
@@ -147,6 +195,9 @@ app.post("/signin", async (req, res) => {
 
 });
 
+app.use((req, res, next) => {
+    res.status(404).send('<h1>Sorry, the page you were looking for is not found</h1>')
+})
 
 
 app.listen(3000, function () {

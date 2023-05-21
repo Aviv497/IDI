@@ -1,0 +1,174 @@
+body {
+    display: flex;
+    background-color: #EDEDED;
+    font-family: "Rubik", sans-serif;
+    color: black;
+    direction: rtl;
+}
+
+html,
+body {
+    height: --webkit-fill-avilable;
+    overflow: hidden;
+    margin: 0;
+}
+
+.all {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background {
+    display: flex;
+    flex-direction: column;
+    height: 265px;
+    width: 100vw;
+    background-color: white;
+    align-items: center;
+}
+
+.background>img {
+    width: 377px;
+    height: 212px;
+    background-size: cover;
+    margin-top: 18px;
+}
+
+.indicators {
+    margin-top: 23px;
+    display: flex;
+    justify-content: space-between;
+    width: 244px;
+    height: 2px;
+}
+
+.indicator {
+    width: 46px;
+    height: 2px;
+    /* UI Properties */
+    background: #7B7B7B 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 0.4;
+}
+
+.indicator.active {
+    opacity: 1;
+}
+
+.text {
+    margin: 30px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 58px;
+    width: 100vw;
+}
+
+.text>h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    width: 380px;
+
+}
+
+.text>p {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    width: 380px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 205px;
+}
+
+button {
+    text-align: right;
+    width: 380px;
+    height: 55px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    border: none;
+    padding: 0 20px 0 20px;
+}
+
+button>h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+button>p {
+    margin: 0;
+    font-size: 14px;
+}
+
+@media only screen and (max-height: 932px) {
+
+    .background {
+        height: calc(265vh / 932 * 100);
+    }
+
+    .background>img {
+        width: calc(377vh / 932 * 100);
+        height: calc(212vh / 932 * 100);
+        margin-top: calc(18vh / 932 * 100);
+    }
+
+    .indicators {
+        margin-top: calc(23vh / 932 * 100);
+        display: flex;
+        justify-content: space-between;
+        width: calc(244vh / 932 * 100);
+        height: calc(2vh / 932 * 100);
+    }
+
+    .indicator {
+        width: calc(46vh / 932 * 100);
+        height: calc(2vh / 932 * 100);
+    }
+
+    .text {
+        margin: calc(30vh / 932 * 100) 0 calc(20vh / 932 * 100) 0;
+        height: calc(58vh / 932 * 100);
+    }
+
+    .text>h1 {
+        font-size: calc(30vh / 932 * 100);
+        width: calc(380vh / 932 * 100);
+
+    }
+
+    .text>p {
+        font-size: calc(18vh / 932 * 100);
+        width: calc(380vh / 932 * 100);
+    }
+
+    .buttons {
+        height: calc(205vh / 932 * 100);
+    }
+
+    button {
+        width: calc(380vh / 932 * 100);
+        height: calc(55vh / 932 * 100);
+        padding: 0 calc(20vh / 932 * 100) 0 calc(20vh / 932 * 100);
+    }
+
+    button>h1 {
+        margin: 0;
+        font-size: calc(20vh / 932 * 100);
+    }
+
+    button>p {
+        margin: 0;
+        font-size: calc(14vh / 932 * 100);
+    }
+
+
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="budget.js"></script>
+    <link rel="stylesheet" type="text/css" href="budget.css">
+</head>
+
+<body>
+
+    <div class="all">
+        <div class="background">
+            <img src="photos/table.png" alt="">
+            <div class="indicators">
+                <div class="indicator active"></div>
+                <div class="indicator active"></div>
+                <div class="indicator"></div>
+                <div class="indicator"></div>
+            </div>
+        </div>
+        <div class="budget">
+            <div class="text">
+                <h1>יש לכם תקציב?</h1>
+                <p id="p">תעדכנו אותנו שלא נחרוג ממנו</p>
+            </div>
+            <div id="buttons" class="buttons">
+                <button onclick="animation()" id="yes">כן</button>
+                <div id="ran">
+                    <p>מה טווח המחירים שאתם מחפשים?</p>
+
+                    <div id="slider-range">
+                        <div class="slider-range">
+                            <span class="ui-slider-handle ui-corner-all ui-state-default">hi</span>
+                            <div class="low">
+                                <p>מינימום</p>
+                                <input id="amount" type="text" style="border:0; color:#000000; font-weight:400;">
+                            </div>
+                            <div class="high">
+                                <p>מקסימום</p>
+                                <input id="amount1" type="text" style="border:0; color:#000000; font-weight:400;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="no" onclick="fill()"
+                    style="background: linear-gradient(to left, #989898 50%, white 50%);background-size: 200% 100%;background-position: left bottom;transition: all .5s ease-in;">לא,
+                    אני גמיש</button>
+            </div>
+            <a href="/style"><button id="keep-going">אפשר להמשיך</button></a>
+        </div>
+    </div>
+
+</body>
+
+</html>

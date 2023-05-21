@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="few-items.css">
+    <script src="one-item.js"></script>
+</head>
+
+<body>
+    <div class="all">
+        <div class="background">
+            <img src="photos/sofa.png" alt="">
+            <div class="indicators">
+                <div class="indicator active"></div>
+                <div class="indicator"></div>
+                <div class="indicator"></div>
+                <div class="indicator"></div>
+            </div>
+        </div>
+        <div class="text">
+            <h1>איזה פריט אתם מחפשים?</h1>
+        </div>
+        <div class="wich-item">
+
+            <button id="table" onclick="fillTable()"
+                style="background: linear-gradient(to left, #989898 50%, white 50%);background-size: 200% 100%;background-position: left bottom;transition: all .5s ease-in;">שולחן</button>
+            <button id="chair" onclick="fillChair()"
+                style="background: linear-gradient(to left, #989898 50%, white 50%);background-size: 200% 100%;background-position: left bottom;transition: all .5s ease-in;">כיסא</button>
+            <button id="sofa" onclick="fillSofa()"
+                style="background: linear-gradient(to left, #989898 50%, white 50%);background-size: 200% 100%;background-position: left bottom;transition: all .5s ease-in;">ספה</button>
+            <button id="cabin" onclick="fillCabin()"
+                style="background: linear-gradient(to left, #989898 50%, white 50%);background-size: 200% 100%;background-position: left bottom;transition: all .5s ease-in;">ארון</button>
+            <button id="arm-chair" onclick="fillArmChair()"
+                style="background: linear-gradient(to left, #989898 50%, white 50%);background-size: 200% 100%;background-position: left bottom;transition: all .5s ease-in;">כורסא</button>
+            <button id="shelf" onclick="fillShelf()"
+                style="background: linear-gradient(to left, #989898 50%, white 50%);background-size: 200% 100%;background-position: left bottom;transition: all .5s ease-in;">שידה</button>
+        </div>
+        <a href="budget"><button id="keep-going">אפשר להמשיך</button></a>
+    </div>
+
+</body>
+
+</html>

@@ -85,7 +85,6 @@ input:focus::placeholder {
     font-size: 14px;
     font-weight: 500;
     color: #727272;
-    font-weight: bold;
 }
 
 p {
@@ -111,7 +110,8 @@ p>a {
 .top>h1 {
     width: 380px;
     margin: 0;
-    font-size: 35px;
+    font-size: 30px;
+    font-weight: 600;
 }
 
 .top>p {
@@ -125,10 +125,10 @@ p>a {
     height: 253px;
     display: block;
     background-repeat: no-repeat;
-    margin-top: 60px;
+    margin-top: 50px;
     margin-right: auto;
     margin-left: auto;
-    background-image: url(signin.png);
+    background-image: url(photos/signin.png);
 }
 
 .c {
@@ -153,7 +153,7 @@ p>a {
 @media only screen and (max-width: 430px) {
 
     .img {
-        margin-top: calc(60vw / 430 * 100);
+        margin-top: calc(50vw / 430 * 100);
         width: calc(273vw / 430 * 100);
         height: calc(253vw / 430 * 100);
         background-size: cover;
@@ -165,7 +165,7 @@ p>a {
 
     .top>h1 {
         width: calc(380vw / 430 * 100);
-        font-size: calc(35vw / 430 * 100);
+        font-size: calc(30vw / 430 * 100);
     }
 
     .top>p {
@@ -217,7 +217,7 @@ p>a {
 @media only screen and (max-height: 932px) {
 
     .img {
-        margin-top: calc(60vh / 932 * 100);
+        margin-top: calc(50vh / 932 * 100);
         width: calc(273vh / 932 * 100);
         height: calc(253vh / 932 * 100);
         background-size: cover;
@@ -229,7 +229,7 @@ p>a {
 
     .top>h1 {
         width: calc(380vh / 932 * 100);
-        font-size: calc(35vh / 932 * 100);
+        font-size: calc(30vh / 932 * 100);
     }
 
     .top>p {
