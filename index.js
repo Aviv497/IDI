@@ -35,7 +35,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/idiDB', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost:27017/idiDB', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("Mongo CONNECTION OPEN")
     })
