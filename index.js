@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const passport = require("passport");
 const LocalStrategy = require('passport-local')
-const passportLocal = require('passport-local');
+const passportLocalMongoose = require("passport-local-mongoose");
 
 const path = require('path');
 const { connect } = require("http2");
@@ -65,11 +65,11 @@ const userSchema = new mongoose.Schema({
     // secret: String
 });
 
-userSchema.plugin(passportLocal);
+userSchema.plugin(passportLocalMongoose);
 
 const User = new mongoose.model("User", userSchema);
 
-passport.use(new passportLocal.Strategy(User.authenticate()));
+passport.use(User.createStrategy());
 
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
