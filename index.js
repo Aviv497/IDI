@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const passport = require("passport");
 const LocalStrategy = require('passport-local')
-const passportLocalMongoose = require("passport-local-mongoose");
+const passportLocal = require('passport-local');
 
 const path = require('path');
 const { connect } = require("http2");
@@ -35,6 +35,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+
 const connectDB = async () => {
     try {
         const conn = await mongoose.connect('mongodb+srv://Aviv:aviv2206@idi.9i0ahxv.mongodb.net/idiDB', {
@@ -47,6 +48,7 @@ const connectDB = async () => {
     } catch (err) {
         console.log("OH NO Mongo connection ERROR!!!!!");
         console.log(err);
+        process.exit(1)
     };
 }
 
@@ -63,11 +65,11 @@ const userSchema = new mongoose.Schema({
     // secret: String
 });
 
-userSchema.plugin(passportLocalMongoose);
+userSchema.plugin(passportLocal);
 
 const User = new mongoose.model("User", userSchema);
 
-passport.use(User.createStrategy());
+passport.use(new passportLocal.Strategy(User.authenticate()));
 
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
