@@ -8,11 +8,13 @@ const session = require('express-session');
 const passport = require("passport");
 const LocalStrategy = require('passport-local')
 const passportLocalMongoose = require("passport-local-mongoose");
-
 const path = require('path');
 const { connect } = require("http2");
 
 const app = express();
+
+const PORT = process.env.PORT || 3000
+
 
 // app.use(express.static("public"));
 
@@ -38,18 +40,12 @@ app.use(passport.session());
 
 const connectDB = async () => {
     try {
-        const conn = await mongoose.connect('mongodb+srv://Aviv:aviv2206@idi.9i0ahxv.mongodb.net/idiDB', {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useCreateIndex: true
-        })
-        console.log(`MongoDB Connected ${conn.connection.host}`);
-
-    } catch (err) {
-        console.log("OH NO Mongo connection ERROR!!!!!");
-        console.log(err);
-        process.exit(1)
-    };
+        const conn = await mongoose.connect("mongodb+srv://Aviv:aviv2206@idi.9i0ahxv.mongodb.net/idiDB");
+        console.log(`MongoDB Connected: ${conn.connection.host}`);
+    } catch (error) {
+        console.log(error);
+        process.exit(1);
+    }
 }
 
 const userSchema = new mongoose.Schema({
@@ -197,7 +193,7 @@ app.use((req, res, next) => {
 
 
 connectDB().then(() => {
-    app.listen(3000, function () {
-        console.log("Server started on port 3000.");
-    });
-});
+    app.listen(PORT, () => {
+        console.log("listening for requests");
+    })
+})
