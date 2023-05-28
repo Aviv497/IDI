@@ -194,6 +194,6 @@ app.use((req, res, next) => {
 
 connectDB().then(() => {
     app.listen(PORT, () => {
-        console.log("listening for requests");
+        console.log(`Server is listening on port ${PORT}`);
     })
 })
