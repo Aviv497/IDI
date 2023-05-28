@@ -3,6 +3,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require('mongoose');
+require('dotenv').config()
+
+
 
 const session = require('express-session');
 const passport = require("passport");
@@ -38,7 +41,7 @@ app.use(passport.session());
 
 const connectDB = async () => {
     try {
-        const conn = await mongoose.connect('mongodb+srv://Aviv:aviv2206@idi.9i0ahxv.mongodb.net/idiDB', {
+        const conn = await mongoose.connect(process.env.MONGO_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true
