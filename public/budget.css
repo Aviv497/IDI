@@ -113,7 +113,7 @@ button {
 #ran>p {
     font-size: 14px;
     font-weight: 400;
-    margin-top: 65px;
+    margin: 55px 0 27px 0;
 }
 
 #ran {
@@ -142,7 +142,12 @@ button {
 }
 
 #slider-range {
-    height: 3px;
+    height: 1px;
+    width: 278px;
+}
+
+#slider-range.ui {
+    height: 1px;
     width: 278px;
 }
 
@@ -158,10 +163,11 @@ button {
 }
 
 .slider-range {
-    margin-top: 59px;
+    margin-top: 53px;
     display: flex;
     flex-direction: row;
     font-size: 16px;
+    height: 40px;
     width: 280px;
     justify-content: space-between;
 }
@@ -224,17 +230,32 @@ input:focus {
     border: none;
 }
 
-.ui-slider-horizontal:focus .ui-state-default:focus {
-    outline: 0;
-    border: none;
+
+.ui-slider-handle {
+    display: flex;
+    justify-content: center;
 }
 
-.ui-slider-horizontal:active .ui-state-default:active {
-    outline: 0;
-    border: none;
-
+.text-min {
+    height: 48px;
+    margin-top: -15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: fit-content;
 }
 
+.text-min>p {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    margin: 0;
+    font-size: 10px;
+}
+
+.text-min>#amountext {
+    font-size: 14px;
+}
 
 
 
@@ -289,8 +310,7 @@ input:focus {
 
     #ran>p {
         font-size: calc(14vh / 932 * 100);
-        font-weight: calc(300vh / 932 * 100);
-        margin-top: calc(65vh / 932 * 100);
+        margin: calc(55vh / 932 * 100) 0 calc(27vh / 932 * 100) 0;
     }
 
     #ran {
@@ -310,11 +330,51 @@ input:focus {
     }
 
     #slider-range {
-        height: calc(3vh / 932 * 100);
+        height: calc(1vh / 932 * 100);
         width: calc(278vh / 932 * 100);
     }
 
     .ui-slider {
         width: calc(280vh / 932 * 100);
     }
+
+    .slider-range {
+        margin-top: calc(53vh / 932 * 100);
+        font-size: calc(16vh / 932 * 100);
+        height: calc(40vh / 932 * 100);
+        width: calc(280vh / 932 * 100);
+    }
+
+    .low {
+        width: calc(120vh / 932 * 100);
+        height: calc(40vh / 932 * 100);
+    }
+
+    .low>p {
+        font-size: calc(10vh / 932 * 100);
+
+    }
+
+    .high {
+        width: calc(120vh / 932 * 100);
+        height: calc(40vh / 932 * 100);
+    }
+
+    .high>p {
+        font-size: calc(10vh / 932 * 100);
+    }
+
+    .text-min {
+        height: calc(48vh / 932 * 100);
+        margin-top: calc(-15vh / 932 * 100);
+    }
+
+    .text-min>p {
+        font-size: calc(10vh / 932 * 100);
+    }
+
+    .text-min>#amountext {
+        font-size: calc(14vh / 932 * 100);
+    }
+
 }

@@ -35,18 +35,29 @@
             </div>
             <div id="buttons" class="buttons">
                 <button onclick="animation()" id="yes">כן</button>
+
                 <div id="ran">
                     <p>מה טווח המחירים שאתם מחפשים?</p>
 
                     <div id="slider-range">
+                        <span
+                            class="ui-slider-handle ui-corner-all ui-state-default ui-state-focus ui-state-active ui-state-hover"
+                            style="color: #000000;">
+                            <div class="text-min">
+                                <p>מינימום</p>
+                                <p id="amountext"></p>
+                            </div>
+                        </span>
+
                         <div class="slider-range">
                             <div class="low">
-                                <p>מינימום</p>
-                                <input id="amount" type="text" style="border:0; color:#000000; font-weight:400;">
-                            </div>
-                            <div class="high">
                                 <p>מקסימום</p>
                                 <input id="amount1" type="text" style="border:0; color:#000000; font-weight:400;">
+                            </div>
+                            <div class="high">
+                                <p>מינימום</p>
+                                <input id="amount" readonly type="text"
+                                    style="border:0; color:#000000; font-weight:400;">
                             </div>
                         </div>
                     </div>

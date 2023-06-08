@@ -18,13 +18,15 @@ body {
 .collum {
     direction: rtl;
     bottom: 274px;
+
     display: flex;
-    width: 100vw;
+    width: 380px;
     height: 136px;
     justify-content: space-between;
     flex-direction: column;
-    align-items: center;
+    align-items: end;
     flex-wrap: wrap;
+    margin: auto;
     margin-top: 30px;
 }
 
@@ -150,69 +152,25 @@ p>a {
     width: 380px;
 }
 
-@media only screen and (max-width: 430px) {
-
-    .img {
-        margin-top: calc(50vw / 430 * 100);
-        width: calc(273vw / 430 * 100);
-        height: calc(253vw / 430 * 100);
-        background-size: cover;
-    }
-
-    .top {
-        margin-top: calc(44vw / 430 * 100);
-    }
-
-    .top>h1 {
-        width: calc(380vw / 430 * 100);
-        font-size: calc(30vw / 430 * 100);
-    }
-
-    .top>p {
-        width: calc(380vw / 430 * 100);
-        margin-top: calc(5vw / 430 * 100);
-        font-size: calc(16vw / 430 * 100);
-    }
-
-    .collum {
-        height: calc(136vw / 430 * 100);
-        margin-top: calc(30vw / 430 * 100);
-    }
-
-    .collum>input {
-        font-size: calc(20vw / 430 * 100);
-        width: calc(380vw / 430 * 100 - 40px);
-        height: calc(53vw / 430 * 100);
-    }
-
-    .change-pass {
-        margin-top: calc(15vw / 430 * 100);
-    }
-
-    .change-pass>p {
-        font-size: calc(14vw / 430 * 100);
-        width: calc(380vw / 430 * 100);
-    }
-
-    .signin {
-        margin-top: calc(28vw / 430 * 100);
-        width: calc(380vw / 430 * 100);
-        height: calc(53vw / 430 * 100);
-        font-size: calc(20vw / 430 * 100);
-    }
-
-    .signup {
-        margin-top: calc(10vw / 430 * 100);
-        height: calc(49vw / 430 * 100);
-        font-size: calc(18vw / 430 * 100);
-    }
-
-    .signup>a {
-        font-size: calc(14vw / 430 * 100);
-    }
-
-
+.icons {
+    height: 136px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: space-between;
+    align-items: end;
+    z-index: 2;
+    width: fit-content;
+    padding-left: 20px;
+    font-size: 19px;
 }
+
+.icon {
+    display: flex;
+    align-items: center;
+    height: 53px;
+}
+
 
 @media only screen and (max-height: 932px) {
 
@@ -239,6 +197,7 @@ p>a {
     }
 
     .collum {
+        width: calc(380vh / 932 * 100);
         height: calc(136vh / 932 * 100);
         margin-top: calc(30vh / 932 * 100);
     }
@@ -277,4 +236,13 @@ p>a {
     }
 
 
+    .icons {
+        height: calc(136vh / 932 * 100);
+        font-size: calc(19vh / 932 * 100);
+        padding-left: calc(20vh / 932 * 100);
+    }
+
+    .icon {
+        height: calc(53vh / 932 * 100);
+    }
 }

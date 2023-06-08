@@ -1,4 +1,16 @@
+function getVal() {
+    const val = document.querySelector('input').value;
+    return val;
+}
+
+
+
 $(function () {
+
+    if ($("#amount").val() != getVal()) {
+        console.log(getVal())
+
+    }
     $("#slider-range").slider({
         step: 100
     });
@@ -8,12 +20,16 @@ $(function () {
         max: 10000,
         values: [2000, 6000],
         slide: function (event, ui) {
+            document.getElementById("amountext").innerHTML = ui.values[0];
             $("#amount").val("₪" + ui.values[0]);
             $("#amount1").val("₪" + ui.values[1]);
+
         }
     });
+    document.getElementById("amountext").innerHTML = $("#slider-range").slider("values", 0);
     $("#amount").val("₪" + $("#slider-range").slider("values", 0));
     $("#amount1").val("₪" + $("#slider-range").slider("values", 1));
+    console.log(getVal())
 
 });
 
@@ -27,7 +43,7 @@ function animation() {
     if (p.style.marginRight == "" && no.style.backgroundPosition == 'left bottom') {
         p.style.setProperty('margin-right', 'calc(3vh / 932 * 100)');
         p.style.transition = ".2s"
-        range.style.setProperty('height', 'calc(248vh / 932 * 100)');
+        range.style.setProperty('height', 'calc(218vh / 932 * 100)');
         range.style.transition = ".2s"
         buttons.style.setProperty('height', 'calc(323vh / 932 * 100)');
         buttons.style.transition = ".2s"

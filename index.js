@@ -28,20 +28,11 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.set("trust proxy", 1); // trust first proxy
-
 
 app.use(session({
-    secret: config.domain,
-    store: new SequelizeStore({
-        db: db.sequelize,
-        checkExpirationInterval: 15 * 60 * 1000, // The interval at which to cleanup expired sessions in milliseconds.
-        expiration: 15 * 24 * 60 * 60 * 1000, // The maximum age (in milliseconds) of a valid session.
-    }),
-    resave: false, // we support the touch method so per the express-session docs this should be set to false
-    proxy: true, // if you do SSL outside of node.
-    saveUninitialized: true,
-    cookie: { secure: true, sameSite: "none" },
+    secret: "Our little secret.",
+    resave: false,
+    saveUninitialized: false
 }));
 
 app.use(passport.initialize());
@@ -131,7 +122,8 @@ app.get("/design", async (req, res) => {
 app.get("/budget", async (req, res) => {
     if (!req.isAuthenticated()) {
         res.redirect("signin")
-    } else res.render("budget", { user: req.user });
+    } else
+        res.render("budget", { user: req.user });
 });
 
 app.get("/fullroom", async (req, res) => {
